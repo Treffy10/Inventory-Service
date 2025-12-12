@@ -74,8 +74,15 @@ WSGI_APPLICATION = 'servicio.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'mssql',
+        'NAME': 'InventoryDB',
+        'USER': 'admin',
+        'PASSWORD': 'martinez1234',
+        'HOST': 'servidor-trip.cml202ma0txy.us-east-1.rds.amazonaws.com',
+        'PORT': '1433',
+        'OPTIONS': {
+            'driver': 'ODBC Driver 18 for SQL Server',
+        },
     }
 }
 
