@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'inventario',
 ]
 
 MIDDLEWARE = [
@@ -75,16 +77,18 @@ WSGI_APPLICATION = 'servicio.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'mssql',
-        'NAME': 'InventoryDB',
+        'NAME': 'BdInventario',
         'USER': 'admin',
         'PASSWORD': 'martinez1234',
         'HOST': 'servidor-trip.cml202ma0txy.us-east-1.rds.amazonaws.com',
         'PORT': '1433',
         'OPTIONS': {
-            'driver': 'ODBC Driver 18 for SQL Server',
+            'driver': 'ODBC Driver 17 for SQL Server',
         },
     }
 }
+
+
 
 
 # Password validation
